@@ -1,0 +1,60 @@
+
+@import url(/core/style/default.css);
+@import url(/plugin/admin/style/main.css);
+
+table th,
+table td {
+	vertical-align: baseline;
+}
+
+.slot_default {
+	padding: 1em 2em 6em 2em;
+	box-sizing: border-box;
+}
+
+.slot_header h1 {
+	width: auto;
+	display: inline-block;
+}
+
+
+.actions {
+	text-align: right;
+	margin: 0em 0em -1em 0em;
+	white-space: nowrap;
+}
+
+.heading_links {
+	margin: 0em 0em 1em 0em;
+}
+
+.action:visited,
+.heading_links a:visited,
+.action,
+.heading_links a,
+input[type=submit],
+input[type=button] {
+	padding: 0.2em 0.6em;
+	background: #369;
+	border: none;
+	cursor: pointer;
+	color: #fff;
+	border-radius: 0.5em;
+	text-decoration: none;
+	position: relative;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+	
+	td .action {
+		padding: 0.1em 0.4em;
+	}
+
+	.action:hover,
+	.action:focus,
+	.heading_links a:hover,
+	.heading_links a:focus,
+	input[type=submit]:hover,
+	input[type=button]:focus {
+		background: #47a;
+	}

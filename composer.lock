@@ -1,0 +1,313 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "f7d468578ae1befd67200198a5dceffa",
+    "packages": [
+        {
+            "name": "cascade/admin",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@git.frozen-doe.net:cascade/administration.git",
+                "reference": "55c3b73e858ed9c925737df7e8790dea3fba10a4"
+            },
+            "require": {
+                "cascade/composer-plugin": ">=1.1",
+                "cascade/core": ">=0.11"
+            },
+            "type": "cascade-plugin",
+            "extra": {
+                "plugin": "admin"
+            },
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Josef Kufner",
+                    "email": "jk@frozen-doe.net"
+                }
+            ],
+            "description": "Administration infrastructure",
+            "time": "2014-05-19 12:24:38"
+        },
+        {
+            "name": "cascade/block_editor",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@git.frozen-doe.net:cascade/block-editor.git",
+                "reference": "687d1f61104fa429fbb0d5d16f28b97d4163ee8c"
+            },
+            "require": {
+                "cascade/admin": "dev-master",
+                "cascade/composer-plugin": ">=1.1"
+            },
+            "type": "cascade-plugin",
+            "extra": {
+                "plugin": "block_editor"
+            },
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Josef Kufner",
+                    "email": "jk@frozen-doe.net"
+                }
+            ],
+            "description": "Visual block editor",
+            "time": "2014-07-25 10:21:17"
+        },
+        {
+            "name": "cascade/composer-plugin",
+            "version": "v1.1",
+            "source": {
+                "type": "git",
+                "url": "git@git.frozen-doe.net:cascade/composer-plugin.git",
+                "reference": "cbad9e45ab2fde398e2a741d594acd90c54b8f2b"
+            },
+            "type": "composer-installer",
+            "extra": {
+                "class": "Cascade\\ComposerPlugin\\Installer"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Cascade\\ComposerPlugin\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "A Composer installer",
+            "time": "2014-01-05 01:10:08"
+        },
+        {
+            "name": "cascade/core",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@git.frozen-doe.net:cascade/core.git",
+                "reference": "ff36faf62fbd87fb81b5aa9a3f68e6606ee606dd"
+            },
+            "require": {
+                "cascade/composer-plugin": ">=1.1",
+                "ext-apcu": "*",
+                "ext-gettext": "*",
+                "ext-json": "*",
+                "php": ">=5.3.3"
+            },
+            "type": "cascade-core",
+            "autoload": {
+                "psr-4": {
+                    "Cascade\\Core\\": "class/"
+                }
+            },
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Josef Kufner",
+                    "email": "jk@frozen-doe.net"
+                }
+            ],
+            "description": "Core of the framework",
+            "time": "2014-10-30 13:33:19"
+        },
+        {
+            "name": "cascade/duf",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@git.frozen-doe.net:cascade/duf.git",
+                "reference": "fc74b8ccfd4040667eaa0cb0c1a0b833accff4a3"
+            },
+            "require": {
+                "cascade/composer-plugin": ">=1.1",
+                "cascade/core": ">=0.11",
+                "php": ">=5.4.0"
+            },
+            "suggest": {
+                "cascade/smalldb": "Generate field groups from state machine definition."
+            },
+            "type": "cascade-plugin",
+            "extra": {
+                "plugin": "duf"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Duf\\": "class/"
+                }
+            },
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Josef Kufner",
+                    "email": "jk@frozen-doe.net"
+                }
+            ],
+            "description": "DUF: Declarative Universal Forms",
+            "time": "2014-10-30 21:48:31"
+        },
+        {
+            "name": "cascade/magic",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@git.frozen-doe.net:cascade/magic.git",
+                "reference": "eebbe60ddeece54a6a6fbf00832f508ab8836da9"
+            },
+            "require": {
+                "cascade/composer-plugin": ">=1.1",
+                "cascade/core": ">=0.12",
+                "cascade/smalldb": ">=0.0"
+            },
+            "type": "cascade-plugin",
+            "extra": {
+                "plugin": "magic"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Magic\\": "class/"
+                }
+            },
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Josef Kufner",
+                    "email": "jk@frozen-doe.net"
+                }
+            ],
+            "description": "Magically synthetize pages from various metadata.",
+            "time": "2014-10-07 21:22:03"
+        },
+        {
+            "name": "cascade/smalldb",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@git.frozen-doe.net:cascade/smalldb.git",
+                "reference": "71c6271fbd24029f36cd8343e47db45932854a32"
+            },
+            "require": {
+                "cascade/composer-plugin": ">=1.1",
+                "cascade/core": ">=0.12",
+                "php": ">=5.4"
+            },
+            "suggest": {
+                "flupdo/flupdo": "SQL database support"
+            },
+            "type": "cascade-plugin",
+            "extra": {
+                "plugin": "smalldb"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Smalldb\\": "class/"
+                }
+            },
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Josef Kufner",
+                    "email": "jk@frozen-doe.net"
+                }
+            ],
+            "description": "Smalldb: State machine abstraction layer",
+            "time": "2014-10-30 21:49:23"
+        },
+        {
+            "name": "erusev/parsedown",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/erusev/parsedown.git",
+                "reference": "da5d75e97e1ed19e57bd54fa6cb595a6a0879a67"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/erusev/parsedown/zipball/da5d75e97e1ed19e57bd54fa6cb595a6a0879a67",
+                "reference": "da5d75e97e1ed19e57bd54fa6cb595a6a0879a67",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Parsedown": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Emanuil Rusev",
+                    "email": "hello@erusev.com",
+                    "homepage": "http://erusev.com"
+                }
+            ],
+            "description": "Parser for Markdown.",
+            "homepage": "http://parsedown.org",
+            "keywords": [
+                "markdown",
+                "parser"
+            ],
+            "time": "2014-10-29 20:29:46"
+        },
+        {
+            "name": "flupdo/flupdo",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@git.frozen-doe.net:cascade/flupdo.git",
+                "reference": "dae3fd4135e3225c10478bc32249d9bcffb00ec2"
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Flupdo\\Flupdo\\": "class/"
+                }
+            },
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Josef Kufner",
+                    "email": "jk@frozen-doe.net"
+                }
+            ],
+            "description": "Flupdo: Simple and fully featured fluent query builder",
+            "time": "2014-10-28 12:17:53"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "cascade/core": 20,
+        "cascade/admin": 20,
+        "cascade/block_editor": 20,
+        "cascade/duf": 20,
+        "cascade/magic": 20,
+        "cascade/smalldb": 20,
+        "flupdo/flupdo": 20
+    },
+    "prefer-stable": true,
+    "platform": [],
+    "platform-dev": []
+}

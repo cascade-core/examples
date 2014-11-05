@@ -1,0 +1,6 @@
+core/
+data/
+lib/
+plugin/
+var/
+*.local.json.php

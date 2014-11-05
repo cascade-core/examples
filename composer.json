@@ -1,0 +1,37 @@
+{
+        "name": "kufnejos/a4m33tvs-00",
+        "description": "Example application",
+        "license": "Apache-2.0",
+        "authors": [
+                {
+                        "name": "Josef Kufner",
+                        "email": "kufnejos@fel.cvut.cz"
+                }
+        ],
+        "repositories": [
+                { "type": "composer", "url": "https://akvarko.frozen-doe.net/composer/" }
+        ],
+        "minimum-stability": "dev",
+        "prefer-stable": true,
+        "require": {
+                "cascade/core": "dev-master",
+                "cascade/admin": "dev-master",
+                "cascade/block_editor": "dev-master",
+                "cascade/duf": "dev-master",
+                "cascade/magic": "dev-master",
+                "cascade/smalldb": "dev-master",
+                "flupdo/flupdo": "dev-master",
+                "erusev/parsedown": "1.x"
+        },
+        "autoload": {
+                "psr-4": { "ExampleApplication\\": "app/class/" }
+        },
+        "config": {
+                "bin-dir": "bin",
+                "vendor-dir": "lib",
+                "prepend-autoloader": false
+        },
+        "extra": {
+        }
+}
+

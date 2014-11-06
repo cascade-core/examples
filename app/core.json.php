@@ -25,6 +25,7 @@
             "smalldb": {
                 "class": "Smalldb\\StateMachine\\JsonDirBackend",
                 "base_dir": "{DIR_APP}statemachine/",
+                "cache_disabled": true,
                 "_resources": {
                     "flupdo": "database"
                 }

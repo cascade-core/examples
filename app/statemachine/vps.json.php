@@ -2,28 +2,28 @@
     "_": "<?php printf('_%c%c}%c',34,10,10);__halt_compiler();?>",
     "class": "ExampleApplication\\UniversalStateMachine",
     "include": [
-        "bug.graphml"
+        "vps.graphml"
     ],
-    "name": "Bug",
-    "desc": "Bug",
-    "table": "bug",
+    "name": "VPS",
+    "desc": "VPS",
+    "table": "vps",
     "flupdo_resource": "database",
     "io_name": "item",
-    "url": "/bug/{id}",
-    "parent_url": "/bug",
+    "url": "/vps/{id}",
+    "parent_url": "/vps",
     "default_access_policy": null,
     "state_select": "state",
     "actions": {
         "listing": {
-            "heading": "Bugs"
+            "heading": "VPS"
         },
         "show": {
-            "heading": "{title}",
+            "heading": "VPS #{id}",
             "heading_without_links": true
         },
-        "report": {
-            "heading": "New bug",
-            "label": "Report",
+        "create": {
+            "heading": "New VPS",
+            "label": "Create",
             "returns": "new_id",
             "method": "create",
             "block": {
@@ -36,7 +36,7 @@
             }
         },
         "edit": {
-            "heading": "Edit bug",
+            "heading": "Edit VPS",
             "label": "Edit",
             "block": {
                 "inputs": {
@@ -53,36 +53,30 @@
             "type": "number",
             "label": "ID",
             "is_pk": true,
-            "link": "/bug/{id}",
+            "link": "/taxi-order/{id}",
             "calculated": true
-        },
-        "title": {
-            "type": "text",
-            "label": "Title",
-            "required": true,
-            "link": "/bug/{id}"
         },
         "state": {
             "type": "text",
             "label": "State",
             "calculated": true
         },
-        "description_md": {
-            "type": "markdownarea",
-            "label": "Description",
-            "required": true,
-            "tabular_hidden": true,
-            "rows": 24
-        },
-        "reporter": {
+        "owner": {
             "type": "text",
-            "label": "Reporter",
+            "label": "Owner",
             "required": true
         },
-        "assignee": {
-            "type": "text",
-            "label": "Assignee",
-            "required": false
+        "system_image": {
+            "type": "select",
+            "label": "System image",
+            "options": {
+                "Debian": "Debian",
+                "Suse": "Suse",
+                "Redhat": "Redhat",
+                "FreeBSD": "FreeBSD",
+                "DOS": "DOS"
+            },
+            "required": true
         },
         "created": {
             "type": "datetime",

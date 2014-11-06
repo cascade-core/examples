@@ -81,6 +81,24 @@
                 "slot": "header",
                 "slot_weight": 20
             }
+        },
+        "entity_menu": {
+            "block": "smalldb/entity_menu",
+            "x": 340,
+            "y": 308,
+            "in_val": {
+                "slot": "header"
+            }
+        },
+        "admin_link": {
+            "block": "core/out/raw",
+            "x": 479,
+            "y": 302,
+            "in_val": {
+                "data": "<a href=\"/admin\" class=\"admin_link\">Administration</a>",
+                "slot": "header",
+                "slot_weight": 60
+            }
         }
     }
 }

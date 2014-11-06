@@ -2,30 +2,29 @@
     "_": "<?php printf('_%c%c}%c',34,10,10);__halt_compiler();?>",
     "class": "ExampleApplication\\UniversalStateMachine",
     "include": [
-        "bug.graphml"
+        "auction.graphml"
     ],
-    "name": "Bug",
-    "desc": "Bug",
-    "table": "bug",
+    "name": "Auction",
+    "desc": "Auction",
+    "table": "auction",
     "flupdo_resource": "database",
     "io_name": "item",
-    "url": "/bug/{id}",
-    "parent_url": "/bug",
+    "url": "/auction/{id}",
+    "parent_url": "/auction",
     "default_access_policy": null,
     "state_select": "state",
     "actions": {
         "listing": {
-            "heading": "Bugs"
+            "heading": "Auctions"
         },
         "show": {
             "heading": "{title}",
             "heading_without_links": true
         },
-        "report": {
-            "heading": "New bug",
-            "label": "Report",
+        "create": {
+            "heading": "New auction",
+            "label": "Create",
             "returns": "new_id",
-            "method": "create",
             "block": {
                 "inputs": {
                     "item": null
@@ -36,7 +35,7 @@
             }
         },
         "edit": {
-            "heading": "Edit bug",
+            "heading": "Edit auction",
             "label": "Edit",
             "block": {
                 "inputs": {
@@ -46,6 +45,28 @@
                 "outputs": {
                 }
             }
+        },
+        "ding": {
+            "heading": "Ding",
+            "label": "Ding",
+            "method": "setState",
+            "block": {
+                "inputs": {
+                    "ref": null,
+                    "item": null
+                },
+                "outputs": {
+                    "done": "return_value"
+                }
+            },
+            "transitions": {
+                "Bidding": {
+                    "args": [ "Ding1" ]
+                },
+                "Ding1": {
+                    "args": [ "Ding2" ]
+                }
+            }
         }
     },
     "properties": {
@@ -53,19 +74,24 @@
             "type": "number",
             "label": "ID",
             "is_pk": true,
-            "link": "/bug/{id}",
+            "link": "/auction/{id}",
             "calculated": true
         },
         "title": {
             "type": "text",
             "label": "Title",
             "required": true,
-            "link": "/bug/{id}"
+            "link": "/auction/{id}"
         },
         "state": {
             "type": "text",
             "label": "State",
             "calculated": true
+        },
+        "price": {
+            "type": "number",
+            "label": "Price",
+            "format": "%d EUR"
         },
         "description_md": {
             "type": "markdownarea",
@@ -73,16 +99,6 @@
             "required": true,
             "tabular_hidden": true,
             "rows": 24
-        },
-        "reporter": {
-            "type": "text",
-            "label": "Reporter",
-            "required": true
-        },
-        "assignee": {
-            "type": "text",
-            "label": "Assignee",
-            "required": false
         },
         "created": {
             "type": "datetime",

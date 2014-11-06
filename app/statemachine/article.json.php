@@ -23,6 +23,7 @@
         },
         "create": {
             "heading": "New article",
+            "label": "Create",
             "returns": "new_id",
             "block": {
                 "inputs": {
@@ -51,7 +52,8 @@
             "type": "number",
             "label": "ID",
             "is_pk": true,
-            "hidden": true
+            "link": "/article/{id}",
+            "calculated": true
         },
         "title": {
             "type": "text",

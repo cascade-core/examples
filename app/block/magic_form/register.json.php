@@ -10,7 +10,7 @@
             "fields": {
                 "submit": {
                     "type": "submit",
-                    "label": "Save"
+                    "label": "Register"
                 }
             }
         }

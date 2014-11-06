@@ -2,28 +2,28 @@
     "_": "<?php printf('_%c%c}%c',34,10,10);__halt_compiler();?>",
     "class": "ExampleApplication\\UniversalStateMachine",
     "include": [
-        "bug.graphml"
+        "supervisor_process.graphml"
     ],
-    "name": "Bug",
-    "desc": "Bug",
-    "table": "bug",
+    "name": "Process",
+    "desc": "Process controlled by supervisor",
+    "table": "supervisor_process",
     "flupdo_resource": "database",
     "io_name": "item",
-    "url": "/bug/{id}",
-    "parent_url": "/bug",
+    "url": "/supervisor-process/{id}",
+    "parent_url": "/supervisor-process",
     "default_access_policy": null,
     "state_select": "state",
     "actions": {
         "listing": {
-            "heading": "Bugs"
+            "heading": "Processes"
         },
         "show": {
-            "heading": "{title}",
+            "heading": "Process #{id}",
             "heading_without_links": true
         },
-        "report": {
-            "heading": "New bug",
-            "label": "Report",
+        "create": {
+            "heading": "New process",
+            "label": "Create",
             "returns": "new_id",
             "method": "create",
             "block": {
@@ -36,7 +36,7 @@
             }
         },
         "edit": {
-            "heading": "Edit bug",
+            "heading": "Edit process",
             "label": "Edit",
             "block": {
                 "inputs": {
@@ -53,36 +53,18 @@
             "type": "number",
             "label": "ID",
             "is_pk": true,
-            "link": "/bug/{id}",
+            "link": "/supervisor-process/{id}",
             "calculated": true
-        },
-        "title": {
-            "type": "text",
-            "label": "Title",
-            "required": true,
-            "link": "/bug/{id}"
         },
         "state": {
             "type": "text",
             "label": "State",
             "calculated": true
         },
-        "description_md": {
-            "type": "markdownarea",
-            "label": "Description",
-            "required": true,
-            "tabular_hidden": true,
-            "rows": 24
-        },
-        "reporter": {
+        "command": {
             "type": "text",
-            "label": "Reporter",
+            "label": "Command",
             "required": true
-        },
-        "assignee": {
-            "type": "text",
-            "label": "Assignee",
-            "required": false
         },
         "created": {
             "type": "datetime",

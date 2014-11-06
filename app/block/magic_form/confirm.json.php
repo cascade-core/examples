@@ -16,15 +16,23 @@
         }
     },
     "layout": {
-        "#!": "null_layout",
-        "widgets": [
+        "#!": "fieldsets_layout",
+        "fieldsets": [
             {
-                "#!": "text",
-                "text": "Do you wish to {form_name}? "
-            }, {
-                "#!": "@edit",
-                "group_id": "submit",
-                "field_id": "submit"
+                "label": "Confirm action",
+                "widgets": [
+                    {
+                        "#!": "placeholder",
+                        "text": "Additional arguments for this action should be here."
+                    }, {
+                        "#!": "text",
+                        "text": "Do you wish to {form_name}? "
+                    }, {
+                        "#!": "@edit",
+                        "group_id": "submit",
+                        "field_id": "submit"
+                    }
+                ]
             }
         ]
     }

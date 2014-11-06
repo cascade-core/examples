@@ -2,28 +2,28 @@
     "_": "<?php printf('_%c%c}%c',34,10,10);__halt_compiler();?>",
     "class": "ExampleApplication\\UniversalStateMachine",
     "include": [
-        "bug.graphml"
+        "eshop_product.graphml"
     ],
-    "name": "Bug",
-    "desc": "Bug",
-    "table": "bug",
+    "name": "Product",
+    "desc": "Product in e-shop",
+    "table": "eshop_product",
     "flupdo_resource": "database",
     "io_name": "item",
-    "url": "/bug/{id}",
-    "parent_url": "/bug",
+    "url": "/eshop-product/{id}",
+    "parent_url": "/eshop-product",
     "default_access_policy": null,
     "state_select": "state",
     "actions": {
         "listing": {
-            "heading": "Bugs"
+            "heading": "Products in e-shop"
         },
         "show": {
             "heading": "{title}",
             "heading_without_links": true
         },
-        "report": {
-            "heading": "New bug",
-            "label": "Report",
+        "create": {
+            "heading": "New e-shop product",
+            "label": "Create",
             "returns": "new_id",
             "method": "create",
             "block": {
@@ -36,7 +36,7 @@
             }
         },
         "edit": {
-            "heading": "Edit bug",
+            "heading": "Edit e-shop product",
             "label": "Edit",
             "block": {
                 "inputs": {
@@ -53,36 +53,30 @@
             "type": "number",
             "label": "ID",
             "is_pk": true,
-            "link": "/bug/{id}",
+            "link": "/eshop-product/{id}",
             "calculated": true
-        },
-        "title": {
-            "type": "text",
-            "label": "Title",
-            "required": true,
-            "link": "/bug/{id}"
         },
         "state": {
             "type": "text",
             "label": "State",
             "calculated": true
         },
+        "title": {
+            "type": "text",
+            "label": "Title",
+            "required": true
+        },
         "description_md": {
             "type": "markdownarea",
             "label": "Description",
-            "required": true,
             "tabular_hidden": true,
-            "rows": 24
-        },
-        "reporter": {
-            "type": "text",
-            "label": "Reporter",
             "required": true
         },
-        "assignee": {
-            "type": "text",
-            "label": "Assignee",
-            "required": false
+        "price": {
+            "type": "number",
+            "label": "Price",
+            "required": true,
+            "format": "%d EUR"
         },
         "created": {
             "type": "datetime",

@@ -2,28 +2,28 @@
     "_": "<?php printf('_%c%c}%c',34,10,10);__halt_compiler();?>",
     "class": "ExampleApplication\\UniversalStateMachine",
     "include": [
-        "bug.graphml"
+        "taxi_order.graphml"
     ],
-    "name": "Bug",
-    "desc": "Bug",
-    "table": "bug",
+    "name": "Taxi order",
+    "desc": "Taxi order",
+    "table": "taxi_order",
     "flupdo_resource": "database",
     "io_name": "item",
-    "url": "/bug/{id}",
-    "parent_url": "/bug",
+    "url": "/taxi-order/{id}",
+    "parent_url": "/taxi-order",
     "default_access_policy": null,
     "state_select": "state",
     "actions": {
         "listing": {
-            "heading": "Bugs"
+            "heading": "Taxi orders"
         },
         "show": {
-            "heading": "{title}",
+            "heading": "Taxi order #{id}",
             "heading_without_links": true
         },
-        "report": {
-            "heading": "New bug",
-            "label": "Report",
+        "create": {
+            "heading": "New order",
+            "label": "Create",
             "returns": "new_id",
             "method": "create",
             "block": {
@@ -36,7 +36,7 @@
             }
         },
         "edit": {
-            "heading": "Edit bug",
+            "heading": "Edit order",
             "label": "Edit",
             "block": {
                 "inputs": {
@@ -53,35 +53,43 @@
             "type": "number",
             "label": "ID",
             "is_pk": true,
-            "link": "/bug/{id}",
+            "link": "/taxi-order/{id}",
             "calculated": true
-        },
-        "title": {
-            "type": "text",
-            "label": "Title",
-            "required": true,
-            "link": "/bug/{id}"
         },
         "state": {
             "type": "text",
             "label": "State",
             "calculated": true
         },
-        "description_md": {
-            "type": "markdownarea",
-            "label": "Description",
-            "required": true,
-            "tabular_hidden": true,
-            "rows": 24
-        },
-        "reporter": {
+        "customer": {
             "type": "text",
-            "label": "Reporter",
+            "label": "Customer name",
             "required": true
         },
-        "assignee": {
-            "type": "text",
-            "label": "Assignee",
+        "pickup_address": {
+            "type": "textarea",
+            "label": "Pickup address",
+            "required": true
+        },
+        "pickup_time": {
+            "type": "datetime",
+            "label": "Pickup time",
+            "required": true
+        },
+        "destination": {
+            "type": "textarea",
+            "label": "Destination address",
+            "required": false
+        },
+        "price": {
+            "type": "textarea",
+            "label": "Price",
+            "required": false,
+            "format": "%d EUR"
+        },
+        "assigned_vehicle": {
+            "type": "textarea",
+            "label": "Vehicle",
             "required": false
         },
         "created": {

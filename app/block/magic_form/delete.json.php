@@ -11,7 +11,7 @@
             "fields": {
                 "submit": {
                     "type": "submit",
-                    "label": "Smazat"
+                    "label": "Delete"
                 }
             }
         }

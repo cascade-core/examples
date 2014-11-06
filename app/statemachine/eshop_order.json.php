@@ -2,28 +2,28 @@
     "_": "<?php printf('_%c%c}%c',34,10,10);__halt_compiler();?>",
     "class": "ExampleApplication\\UniversalStateMachine",
     "include": [
-        "bug.graphml"
+        "eshop_order.graphml"
     ],
-    "name": "Bug",
-    "desc": "Bug",
-    "table": "bug",
+    "name": "Order",
+    "desc": "Order in e-shop",
+    "table": "eshop_order",
     "flupdo_resource": "database",
     "io_name": "item",
-    "url": "/bug/{id}",
-    "parent_url": "/bug",
+    "url": "/eshop-order/{id}",
+    "parent_url": "/eshop-order",
     "default_access_policy": null,
     "state_select": "state",
     "actions": {
         "listing": {
-            "heading": "Bugs"
+            "heading": "Orders in e-shop"
         },
         "show": {
-            "heading": "{title}",
+            "heading": "Order #{id}",
             "heading_without_links": true
         },
-        "report": {
-            "heading": "New bug",
-            "label": "Report",
+        "create": {
+            "heading": "New e-shop order",
+            "label": "Create",
             "returns": "new_id",
             "method": "create",
             "block": {
@@ -36,7 +36,7 @@
             }
         },
         "edit": {
-            "heading": "Edit bug",
+            "heading": "Edit e-shop order",
             "label": "Edit",
             "block": {
                 "inputs": {
@@ -53,36 +53,36 @@
             "type": "number",
             "label": "ID",
             "is_pk": true,
-            "link": "/bug/{id}",
+            "link": "/eshop-order/{id}",
             "calculated": true
-        },
-        "title": {
-            "type": "text",
-            "label": "Title",
-            "required": true,
-            "link": "/bug/{id}"
         },
         "state": {
             "type": "text",
             "label": "State",
             "calculated": true
         },
-        "description_md": {
-            "type": "markdownarea",
-            "label": "Description",
-            "required": true,
-            "tabular_hidden": true,
-            "rows": 24
-        },
-        "reporter": {
+        "customer": {
             "type": "text",
-            "label": "Reporter",
+            "label": "Customer name",
             "required": true
         },
-        "assignee": {
-            "type": "text",
-            "label": "Assignee",
-            "required": false
+        "address": {
+            "type": "textarea",
+            "label": "Delivery address",
+            "tabular_hidden": true,
+            "required": true
+        },
+        "items": {
+            "type": "textarea",
+            "label": "Items",
+            "tabular_hidden": true,
+            "required": true
+        },
+        "total_price": {
+            "type": "number",
+            "label": "Total price",
+            "required": true,
+            "format": "%d EUR"
         },
         "created": {
             "type": "datetime",

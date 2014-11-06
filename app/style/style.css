@@ -12,10 +12,15 @@ table td {
 	box-sizing: border-box;
 }
 
-.slot_header h1 {
-	width: auto;
-	display: inline-block;
+.slot_header {
+	overflow: visible;
 }
+
+	.slot_header h1 {
+		width: auto;
+		display: inline-block;
+		margin-right: 2em;
+	}
 
 
 .actions {
@@ -57,4 +62,73 @@ input[type=button] {
 	input[type=submit]:hover,
 	input[type=button]:focus {
 		background: #47a;
+	}
+
+.entity_menu {
+	display: inline-block;
+}
+
+	.entity_menu > input + label + div {
+		display: none;
+		position: absolute;
+		border: 1px solid #000;
+		box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+		background: #fff;
+		z-index: 10000;
+	}
+
+	.entity_menu > input {
+		display: none;
+	}
+
+	.entity_menu > input:checked + label + div {
+		display: block;
+	}
+
+	.entity_menu a,
+	a.admin_link,
+	.entity_menu > input + label {
+		display: block;
+		padding: 0.3em 1em;
+		color: #000;
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+	a.admin_link,
+	.entity_menu > input + label {
+		border-radius: 0.5em 0.5em 0em 0em;
+	}
+
+
+	.entity_menu > input:checked + label,
+	.entity_menu a:hover,
+	.entity_menu a:focus {
+		background: #47a;
+		color: #fff;
+	}
+
+	a.admin_link {
+		display: inline-block;
+	}
+
+	.entity_menu label:hover,
+	.entity_menu label:focus,
+	a.admin_link:hover,
+	a.admin_link:focus {
+		background: #9be;
+	}
+
+fieldset {
+	border: 1px solid #aaa;
+	margin: 2em 0em;
+}
+
+	fieldset legend {
+		font-weight: bold;
+		padding: 0em 0.5em;
+	}
+
+	fieldset .placeholder {
+		padding: 5% 1em;
 	}

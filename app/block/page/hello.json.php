@@ -13,14 +13,6 @@
                 "is_success": true,
                 "title": "It works!"
             }
-        },
-        "raw": {
-            "block": "core/out/raw",
-            "x": 220,
-            "y": 31,
-            "in_val": {
-                "data": "<a href=\"/article\">Articles</a>, <a href=\"/admin\">Administration</a>."
-            }
         }
     }
 }

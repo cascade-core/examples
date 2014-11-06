@@ -2,28 +2,28 @@
     "_": "<?php printf('_%c%c}%c',34,10,10);__halt_compiler();?>",
     "class": "ExampleApplication\\UniversalStateMachine",
     "include": [
-        "bug.graphml"
+        "user.graphml"
     ],
-    "name": "Bug",
-    "desc": "Bug",
-    "table": "bug",
+    "name": "User",
+    "desc": "User",
+    "table": "user",
     "flupdo_resource": "database",
     "io_name": "item",
-    "url": "/bug/{id}",
-    "parent_url": "/bug",
+    "url": "/user/{id}",
+    "parent_url": "/user",
     "default_access_policy": null,
     "state_select": "state",
     "actions": {
         "listing": {
-            "heading": "Bugs"
+            "heading": "Users"
         },
         "show": {
-            "heading": "{title}",
+            "heading": "{name}",
             "heading_without_links": true
         },
-        "report": {
-            "heading": "New bug",
-            "label": "Report",
+        "register": {
+            "heading": "New user",
+            "label": "Create",
             "returns": "new_id",
             "method": "create",
             "block": {
@@ -36,7 +36,7 @@
             }
         },
         "edit": {
-            "heading": "Edit bug",
+            "heading": "Edit order",
             "label": "Edit",
             "block": {
                 "inputs": {
@@ -53,36 +53,29 @@
             "type": "number",
             "label": "ID",
             "is_pk": true,
-            "link": "/bug/{id}",
+            "link": "/taxi-order/{id}",
             "calculated": true
-        },
-        "title": {
-            "type": "text",
-            "label": "Title",
-            "required": true,
-            "link": "/bug/{id}"
         },
         "state": {
             "type": "text",
             "label": "State",
             "calculated": true
         },
-        "description_md": {
-            "type": "markdownarea",
-            "label": "Description",
-            "required": true,
-            "tabular_hidden": true,
-            "rows": 24
-        },
-        "reporter": {
+        "name": {
             "type": "text",
-            "label": "Reporter",
+            "label": "Name",
             "required": true
         },
-        "assignee": {
-            "type": "text",
-            "label": "Assignee",
-            "required": false
+        "email": {
+            "type": "email",
+            "label": "e-mail",
+            "required": true
+        },
+        "address": {
+            "type": "textarea",
+            "label": "address",
+            "required": true,
+            "tabular_hidden": true
         },
         "created": {
             "type": "datetime",

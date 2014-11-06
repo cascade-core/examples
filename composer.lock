@@ -12,7 +12,7 @@
             "source": {
                 "type": "git",
                 "url": "git@git.frozen-doe.net:cascade/administration.git",
-                "reference": "55c3b73e858ed9c925737df7e8790dea3fba10a4"
+                "reference": "3ff93f9c8026d8184881e4bd23164ebf6e8e1567"
             },
             "require": {
                 "cascade/composer-plugin": ">=1.1",
@@ -32,7 +32,7 @@
                 }
             ],
             "description": "Administration infrastructure",
-            "time": "2014-05-19 12:24:38"
+            "time": "2014-11-05 11:01:50"
         },
         {
             "name": "cascade/block_editor",
@@ -124,7 +124,7 @@
             "source": {
                 "type": "git",
                 "url": "git@git.frozen-doe.net:cascade/duf.git",
-                "reference": "fc74b8ccfd4040667eaa0cb0c1a0b833accff4a3"
+                "reference": "77ec13921bf270e503896809ada107eacf1139c9"
             },
             "require": {
                 "cascade/composer-plugin": ">=1.1",
@@ -132,7 +132,8 @@
                 "php": ">=5.4.0"
             },
             "suggest": {
-                "cascade/smalldb": "Generate field groups from state machine definition."
+                "cascade/smalldb": "Generate field groups from state machine definition.",
+                "erusev/parsedown": "Markdown formated field."
             },
             "type": "cascade-plugin",
             "extra": {
@@ -153,7 +154,7 @@
                 }
             ],
             "description": "DUF: Declarative Universal Forms",
-            "time": "2014-10-30 21:48:31"
+            "time": "2014-11-06 11:07:44"
         },
         {
             "name": "cascade/magic",
@@ -161,7 +162,7 @@
             "source": {
                 "type": "git",
                 "url": "git@git.frozen-doe.net:cascade/magic.git",
-                "reference": "eebbe60ddeece54a6a6fbf00832f508ab8836da9"
+                "reference": "7f2aa585d3cd589431b49c33b3314d68cbe6a044"
             },
             "require": {
                 "cascade/composer-plugin": ">=1.1",
@@ -187,7 +188,7 @@
                 }
             ],
             "description": "Magically synthetize pages from various metadata.",
-            "time": "2014-10-07 21:22:03"
+            "time": "2014-11-06 12:13:22"
         },
         {
             "name": "cascade/smalldb",
@@ -195,7 +196,7 @@
             "source": {
                 "type": "git",
                 "url": "git@git.frozen-doe.net:cascade/smalldb.git",
-                "reference": "71c6271fbd24029f36cd8343e47db45932854a32"
+                "reference": "d2ab1b744b9fac8911100a900e2e62e495cfc867"
             },
             "require": {
                 "cascade/composer-plugin": ">=1.1",
@@ -224,7 +225,7 @@
                 }
             ],
             "description": "Smalldb: State machine abstraction layer",
-            "time": "2014-10-30 21:49:23"
+            "time": "2014-11-06 12:11:22"
         },
         {
             "name": "erusev/parsedown",
@@ -271,7 +272,7 @@
             "source": {
                 "type": "git",
                 "url": "git@git.frozen-doe.net:cascade/flupdo.git",
-                "reference": "dae3fd4135e3225c10478bc32249d9bcffb00ec2"
+                "reference": "aa003254a8c43d38db9e3662a3f2a11177b399aa"
             },
             "require": {
                 "php": ">=5.4"
@@ -292,7 +293,7 @@
                 }
             ],
             "description": "Flupdo: Simple and fully featured fluent query builder",
-            "time": "2014-10-28 12:17:53"
+            "time": "2014-11-04 22:28:57"
         }
     ],
     "packages-dev": [],
